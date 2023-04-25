@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.vaulttec.sonarqube.auth.oidc</groupId>
@@ -50,6 +52,16 @@
 		<tag>v1.1.0</tag>
 	</scm>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>net.minidev</groupId>
+				<artifactId>json-smart</artifactId>
+				<version>2.4.9</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<developers>
 		<developer>
 			<id>tjuerge</id>
@@ -88,11 +100,11 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.8.2</version>
-				<configuration>
+				<!-- <configuration>
 					<skip>true</skip>
-				</configuration>
+				</configuration> -->
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>de.jutzig</groupId>
 				<artifactId>github-release-plugin</artifactId>
 				<version>1.4.0</version>
@@ -107,11 +119,12 @@
 						<configuration>
 							<releaseName>v${project.version}</releaseName>
 							<tag>v${project.version}</tag>
-							<artifact>${project.build.directory}/${project.artifactId}-${project.version}.jar</artifact>
+							<artifact>
+								${project.build.directory}/${project.artifactId}-${project.version}.jar</artifact>
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 
