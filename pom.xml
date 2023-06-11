@@ -52,16 +52,6 @@
 		<tag>v1.1.0</tag>
 	</scm>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>net.minidev</groupId>
-				<artifactId>json-smart</artifactId>
-				<version>2.4.9</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<developers>
 		<developer>
 			<id>tjuerge</id>
